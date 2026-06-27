@@ -81,8 +81,8 @@ async function seed() {
   });
   await Lawyer.insertMany(lawyerDocs);
 
-  console.log("Admin account check kar rahe hain...");
-  const adminEmail = "admin@merawakeel.com";
+  console.log("Admin verify account...");
+  const adminEmail = "admin@counsel.com";
   const existingAdmin = await User.findOne({ email: adminEmail });
   if (!existingAdmin) {
     await User.create({
